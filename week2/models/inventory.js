@@ -1,0 +1,50 @@
+const mongoose = require("mongoose")
+const Schema = mongoose.Schema
+
+//inventory schema
+const inventorySchema = new Schema({
+    product_Id:{
+        type:String,
+        required:true
+    },
+    sku:{
+        type:Number, 
+        required:true
+    }, 
+    productName:{
+        type:String, 
+        required:true
+    }, 
+    productDescription:{
+        type:String, 
+        required:true
+    }, 
+    unitPrice:{
+        type:Number, 
+        required:true
+    }, 
+    MSRP:{
+        type:Number, 
+        required:true
+    }, 
+    Discount:{
+        type:Number, 
+        required:null
+    }, 
+    unitWeight:{
+        type:Number, 
+        required:true
+    }, 
+    picture:{
+        type:String, 
+        required:true
+    }, 
+    note:{
+        type:String, 
+        required:null
+    }
+
+
+})
+
+module.exports = mongoose.model('Inventory', inventorySchema)
