@@ -8,14 +8,11 @@ app.use(express.json())
 app.use(morgan('dev'))
 
 //connect to db (can we call this db anything we like?)
-mongoose.connect('mongodb://localhost:27017/inventorydb', {
-    useNewUrlParser:true, 
-    useUnifiedTopology:true, 
-    unCreateIndex:true, 
-    useFindAndModify:false
-}, 
-()=> console.log ("connected to DB")
-)
+main().catch(err => console.log(err));
+async function main() {
+    await mongoose.connect('mongodb://localhost:27017/inventory');
+    console.log("Connected to the DB")
+}
 
 //routes
 app.use("/inventory", require("./routes/inventoryRouter.js"))
