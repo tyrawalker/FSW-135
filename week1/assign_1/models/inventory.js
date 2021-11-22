@@ -4,7 +4,7 @@ const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
 //inventory schema
-const inventorySchema = newSchema({
+const inventorySchema = new Schema({
     productId:{
         type:ObjectID,
         required:true
