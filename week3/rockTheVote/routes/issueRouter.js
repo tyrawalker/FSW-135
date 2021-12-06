@@ -46,7 +46,7 @@ issueRouter.delete("/:issue_ID", (req, res, next) => {
             res.status(500)
             return next(err)
         }
-        return res.status(200).send(`Successfully deleted item from the Database`)
+        return res.status(200).send(`Successfully deleted ${deletedItem} item from the Database`)
     })
 })
 

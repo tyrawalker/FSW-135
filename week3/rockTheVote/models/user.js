@@ -29,10 +29,12 @@ const userSchema = new Schema ({
         type: Number, 
         min: 18
     }, 
-    _id:{
-        type: String, 
+    user:{
+        type: Schema.Types.ObjectId, 
+        ref: "User", 
         required: true
     }
-})
+    }
+)
 
 module.exports = mongoose.model("User", userSchema)
