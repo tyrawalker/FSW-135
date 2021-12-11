@@ -43,4 +43,34 @@ authRouter.post("/login", (req, res, next) => {
     })
   })
 
+    //get one credential validation
+    authRouter.get("/:comment_ID", (req, res, next) =>{
+      const error = new Error(`This method should not be envoked`)
+      res.status(403)
+      return next (error)
+})
+
+//Post credential validation
+authRouter.post('/', (req, res, next)=>{
+const error = new Error(`This method should not be envoked`)
+      res.status(403)
+      return next (error)
+})
+
+
+//Delete One credential validation
+authRouter.delete("/:comment_ID", (req, res, next) => {
+const error = new Error(`This method should not be envoked`)
+      res.status(403)
+      return next (error)
+})
+
+//update one credential validation
+authRouter.put("/:comment_ID", (req, res, next) =>{
+const error = new Error(`This method should not be envoked`)
+      res.status(403)
+      return next (error)
+})
+
+
 module.exports = authRouter
