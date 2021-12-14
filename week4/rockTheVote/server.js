@@ -1,4 +1,3 @@
-//App will not launch becuase of error on ln 27. see notes. was unable to populate new user in postman.
 //required
 require('dotenv').config()
 const express = require ("express")
@@ -35,6 +34,6 @@ app.use((err, req, res, next) =>{
 })
 
 //server listen
-app.listen(9000,() => {
-    console.log("Server is running on 9000")
+app.listen(8000,() => {
+    console.log("Server is running on 8000")
 } )

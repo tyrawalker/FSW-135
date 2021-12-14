@@ -6,12 +6,11 @@ const Schema = mongoose.Schema
 const userSchema = new Schema ({
     firstName: {
         type: String,
-        required = true
-
+        required: true
     }, 
     lastName:{
         type:String, 
-        required = true
+        required:true
     }, 
     userName:{
         type: String, 
@@ -29,9 +28,10 @@ const userSchema = new Schema ({
         type: Number, 
         min: 18
     }, 
-    _id:{
-        type: String, 
-        required: true
+    user:{
+        type: Schema.Types.ObjectId, 
+        ref: "User", 
+        required:true
     }
 })
 
