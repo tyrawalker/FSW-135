@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {Component} from 'react'
+import '../App.css'
 
-export default function Issue(props){
+  function Issue(props){
     const{
         handleChange, 
         handleSubmit, 
@@ -28,3 +29,5 @@ export default function Issue(props){
         </form>
     ) 
 }
+
+export default Issue;
